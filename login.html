@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.
+    0">
+    <title>Página de login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <form>
+        <img style="border-radius: 9%;" src="imagens/logo02.jpg" alt="">
+        <h1 style="text-align: center;">Seja bem vindo!</h1>
+        <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        Para ter acesso, seu desafio é decifrar o seguinte enigma:</h3>
+        <p  style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        "Sou uma arma silenciosa, mortal e discreta,
+        utilizada por aqueles que buscam a vitória completa.
+        Nas mãos do Ghost sou um instrumento precioso,
+        capaz de derrotar qualquer inimigo enganoso.
+        Quem sou eu?"</p>
+        <label for="senha">Resposta:</label>
+        <input type="password" id="senha" name="senha">
+        <button type="button" onclick="validarSenha()">Enviar</button>
+        </form>
+        <script>
+        function validarSenha() {
+        //Obter a senha digitada pelo usuário
+        var senha = document.getElementById("senha").value;
+    
+        //Verificar se a senha é válida (por exemplo, se é igual a "Sniper")
+        if (senha === "Sniper") {
+    //Se a senha for válida, redirecionar para a página de boas-vindas
+    window.location.href = "index.html";
+        } else {
+    //Se a senha for inválida, exibir uma mensagem de erro
+    alert("Infelizmente, essa não é a resposta correta. Tente novamente!");
+        }
+    }
+    </script>
+</body>
+</html>
